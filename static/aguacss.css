@@ -1,0 +1,38 @@
+body{
+    background-color: lightblue;
+}
+.Big{
+    font-size:200px;
+    font-weight:900;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(76, 76, 171);
+}
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .marquee {
+    display: flex;
+    animation: marqueeAnimation 10s linear infinite; /* Adjust speed as needed */
+  }
+  
+  .marquee img {
+    width: 200px; /* Adjust image width */
+    height: auto;
+    margin-right: 20px; /* Space between images */
+  }
+  
+  @keyframes marqueeAnimation {
+    0% {
+      transform: translateX(0); /* Start position */
+    }
+    100% {
+      transform: translateX(-100%); /* Move to the left */
+    }
+  }
+  
+  
+  
+  
