@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const result = Math.floor((inputValue * 13 * 365) / 25);
 
         // Display the calculated result in the HTML with "liters per year"
-        document.getElementById("calculatedResult").textContent = `Calculated result: ${result} water jugs per year`;
+        document.getElementById("calculatedResult").textContent = `Calculated result: ${result} liters per year`;
 
         // Get the container where images will be displayed
         const imagesContainer = document.getElementById("imagesContainer");
@@ -27,6 +27,10 @@ document.addEventListener("DOMContentLoaded", function() {
             imgElement.alt = `Image ${i + 1}`;
             imagesContainer.appendChild(imgElement);
         }
+
+        // Add a message below the images
+        const messageContainer = document.getElementById("messageContainer");
+        messageContainer.innerHTML = `<p>That's a lot of water! Consider taking shorter showers to save both water and money.</p>`;
     }
 
     // Add event listener for the submit button
