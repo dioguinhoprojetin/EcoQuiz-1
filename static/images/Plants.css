@@ -2,7 +2,7 @@
     color: black;
 }
 body{
-    background-image: url(photo-1542273917363-3b1817f69a2d.jpg);
+    background-image: url('Plants.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,13 +10,12 @@ body{
     color: white; /* Adjust text color for visibility */
 }
 .header{
-    background-color: green;
     color: white;
     text-align: center;
     padding: 10px;
     border-radius: 10px;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
 }
 .header p{
     font-size: 20px;
@@ -28,4 +27,25 @@ body{
 .description{
     font-size: 30px;
     text-align: center;
+}
+input{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: transparent;
+    color: white;
+    
+}
+.custom-placeholder::placeholder {
+    color: white; /* Tomato red */
+    font-weight: bold;
+}
+.question{
+    color: white;
+}
+#displayText, #displayText2{
+    color: white;
+    text-align: center;
+    font-size: 40px;
 }

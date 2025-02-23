@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plants</title>
     <link rel="stylesheet" type="text/css" href="Plants.css">
+    <script src="Plants.js" defer></script>
 </head>
 <body>
     <div class="header">
@@ -14,9 +15,20 @@
     <br><br><br>
     <div class="content">
         <p>How many plants de you have?</p>
-        <input type="number" placeholder="Nuber of plants">
+        <input class="custom-placeholder"type="number" id="userInput" oninput="changeText()" placeholder="Number of plants">
+    </div>
+    <div class="lower">
+        <p id="displayText"></p>
         <br><br>
-        <li>Ways of irrigation</li>
+    </div>
+    <br><br><br>
+    <div class="content">
+        <p>How much time do you spend watering it?</p>
+        <input class="custom-placeholder"type="number" id="userInput2" oninput="changeText2()" placeholder="Minutes watering">
+    </div>
+    <div class="lower">
+        <p id="displayText2"></p>
+        <br><br>
     </div>
 </body>
 </html>
