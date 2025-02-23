@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Create and display images based on the calculated result
         for (let i = 0; i < result; i++) {
             const imgElement = document.createElement("img");
-            imgElement.src = "images/gallon.png"; // Image path
+            imgElement.src = "../static/images/gallon.png"; // Image path
             imgElement.alt = `Image ${i + 1}`;
             imagesContainer.appendChild(imgElement);
         }
