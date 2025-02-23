@@ -1,8 +1,11 @@
 *{
     color: black;
+    text-align: center;
+    margin-left: 120px;
+    margin-right: 120px;
 }
 body{
-    background-image: url('Plants.jpg');
+    background-image: url(Plantss.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,12 +13,12 @@ body{
     color: white; /* Adjust text color for visibility */
 }
 .header{
-    color: white;
     text-align: center;
     padding: 10px;
     border-radius: 10px;
-    font-size: 50px;
+    font-size: 70px;
     font-family: 'Courier New', Courier, monospace;
+    margin-top: -80px;
 }
 .header p{
     font-size: 20px;
@@ -27,6 +30,8 @@ body{
 .description{
     font-size: 30px;
     text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 input{
     font-size: 20px;
@@ -34,18 +39,15 @@ input{
     border-radius: 10px;
     margin: 10px;
     background-color: transparent;
-    color: white;
     
 }
 .custom-placeholder::placeholder {
-    color: white; /* Tomato red */
     font-weight: bold;
 }
 .question{
-    color: white;
+
 }
 #displayText, #displayText2{
-    color: white;
     text-align: center;
     font-size: 40px;
 }

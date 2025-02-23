@@ -9,8 +9,22 @@ function changeText() {
 function changeText2() {
     // Get the user input
     const userInput2 = document.getElementById("userInput2").value;
-    const output = "You spent " + userInput2*9+ " gallons of water per minute if you had used a Hose with no nozzle, but if you had used a nozzle you would have spent " + userInput2*20 + " gallons of water per minute!";
+    const output = "You spent " + userInput2*9+ " gallons of water with a 1/2-inch diameter Hose, but if you had used a 5/8-inch diameter hose you would have spent " + userInput2*17 + " gallons of water!";
 
     // Change the paragraph text
     document.getElementById("displayText2").innerText = output;
+}
+
+function growPlant() {
+    let numPlants = document.getElementById("userInput").value;
+    let plantImage = document.getElementById("plantImage");
+
+    // Ensure the number of plants is positive
+    if (numPlants < 1) {
+        numPlants = 1;
+    }
+
+    // Scale the plant size based on input (capped at 200px)
+    let newSize = Math.min(50 + numPlants * 10, 200);
+    plantImage.style.transform = `scale(${newSize / 50})`;
 }
