@@ -24,7 +24,7 @@ def garbage():
 
 @app.route("/plants", methods=['GET'])
 def plants():
-    return "<h1>Tu mama en 5</h1>"
+    return render_template("Plants.html")
 
 
 @app.route("/vehicles", methods=['GET'])
