@@ -14,7 +14,7 @@ def electricidad():
 
 @app.route("/agua", methods=['GET'])
 def agua():
-    return "<h1>Tu mama en 3</h1>"
+    return render_template('agua.html')
 
 
 @app.route("/basura", methods=['GET'])
@@ -29,7 +29,8 @@ def plantas():
 
 @app.route("/vehiculos", methods=['GET'])
 def vehiculos():
-    return "<h1>Tu mama en 6</h1>"
+    return render_template("vehicles.html")
+
 
 if __name__ == "__main__":
     app.run()
