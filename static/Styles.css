@@ -21,6 +21,7 @@
     justify-content: center;
     height: 100vh;
     text-align: center;
+    backdrop-filter: blur(3px); /* Applying blur to the content */
   }
   
   @keyframes moveBackground {
