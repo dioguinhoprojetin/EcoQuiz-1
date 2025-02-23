@@ -76,3 +76,19 @@ main{
     z-index: 4;
     top: 330px;
 }
+
+.info {
+    align-self: flex-start;
+    padding-top: 130px;
+    margin-left: 50px;
+    z-index: 7;
+    font-size: 12px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+}
+
+.title {
+    align-self: flex-start;
+    padding: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
