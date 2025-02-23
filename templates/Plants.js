@@ -9,7 +9,7 @@ function changeText() {
 function changeText2() {
     // Get the user input
     const userInput2 = document.getElementById("userInput2").value;
-    const output = "You spent " + userInput2*9+ " gallons of water with a 1/2-inch diameter Hose, but if you had used a 5/8-inch diameter hose you would have spent " + userInput2*17 + " gallons of water!";
+    const output = "You would have spent approximately" + userInput2*9+ " gallons of water with a 1/2-inch diameter hose, but if you had used a 5/8-inch diameter hose you would have spent " + userInput2*17 + " gallons of water!";
 
     // Change the paragraph text
     document.getElementById("displayText2").innerText = output;
