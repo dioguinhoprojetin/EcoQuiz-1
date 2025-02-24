@@ -9,7 +9,7 @@
   }
   
   body {
-    background: url('/static/images/greysquare.png') repeat;
+    background: url('images/greysquare.png') repeat;
     background-size: 100px 100px;
     filter: blur(0px); /* Applying blur to the background */
     position: relative;
@@ -21,7 +21,6 @@
     justify-content: center;
     height: 100vh;
     text-align: center;
-    backdrop-filter: blur(3px); /* Applying blur to the content */
   }
   
   @keyframes moveBackground {
@@ -32,7 +31,7 @@
       background-position: 0 -100%;
     }
   }
-  
+
   .container {
     max-width: 800px;
     padding: 20px;
