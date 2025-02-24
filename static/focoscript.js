@@ -59,7 +59,7 @@ else{
     document.getElementById("answer4").style.animation = "fadeintext 8s forwards";
     document.getElementById("answer4").textContent = "If you were to change your habits like using your lights less or switching to LED lightbulbs, you could save money and the environment.";
     document.getElementById("answer5").style.animation = "fadeintext 8s forwards";
-    document.getElementById("answer5").textContent = "Instead of what you are currently doing, you could be saving " + ((107/8 * (22-timeb) *16 / 100 * qt) - (kw/8 * hr * 16 / 100 * qt)) + " dollars per year.";
+    document.getElementById("answer5").textContent = "Instead of what you are currently doing, you could be saving " + (((107/8 * (22-timeb) *16 / 100 * qt) - (kw/8 * hr * 16 / 100 * qt)).toFixed(2)) + " dollars per year.";
 }
 }
 

@@ -9,7 +9,7 @@ def index():
 
 @app.route("/electricity", methods=['GET'])
 def electricity():
-    return "<h1>Tu mama en 2</h1>"
+    return render_template("focos.html")
 
 
 @app.route("/water", methods=['GET'])
