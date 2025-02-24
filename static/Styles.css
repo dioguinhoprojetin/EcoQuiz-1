@@ -9,7 +9,7 @@
   }
   
   body {
-    background: url('images/greysquare.png') repeat;
+    background: url('/static/images/greysquare.png') repeat;
     background-size: 100px 100px;
     filter: blur(0px); /* Applying blur to the background */
     position: relative;
@@ -32,7 +32,7 @@
       background-position: 0 -100%;
     }
   }
-
+  
   .container {
     max-width: 800px;
     padding: 20px;
