@@ -1,72 +1,78 @@
-**Inspiration**
+# 🌱 Eco Quiz - Climate Change-Maker Hackathon 2025
 
-For the 2025 version of the Climate Change-Maker Hackathon, our team wanted to create an engaging and educational experience to raise awareness about environmental issues. We were inspired by the need to teach people who just want to have a fun time about the impact of human actions on nature and how small changes can make a big difference. Gamification felt like the perfect approach to make learning fun, interactive and cause an impression on people
+## ✨ Inspiration
+For the 2025 version of the **Climate Change-Maker Hackathon**, our team aimed to create an engaging and educational experience to raise awareness about environmental issues. We were inspired by the need to teach people who just want to have fun about the impact of human actions on nature and how small changes can make a big difference. **Gamification** felt like the perfect approach to make learning fun, interactive, and impactful! 🎮🌍
 
-**What Does It Do?
-**Eco Quiz is a webpage featuring five little interactive games focused on different environmental topics:
+---
 
-• Vehicles: A simulation of a 10 km car ride that showcases the impact on the environment of the ride on a kilometer by kilometer basis.
+## 🎯 What Does It Do?
+**Eco Quiz** is a webpage featuring five interactive mini-games, each focusing on different environmental topics:
 
-• Garbage: A small quiz with questions pertaining to recycling and waste management, with personalized recommendations on how to reduce contamination.
+- 🚗 **Vehicles**: A simulation of a 10 km car ride that showcases the environmental impact of the trip on a kilometer-by-kilometer basis.
+- 🗑️ **Garbage**: A recycling and waste management quiz with personalized tips to reduce pollution.
+- 🚿 **Water**: A game about responsible water usage during bath time.
+- 🌿 **Plants**: Highlights the ecological importance of plants and their role in the ecosystem.
+- 💡 **Lightbulbs**: Shows the impact of energy consumption based on your type and number of lightbulbs.
 
-• Water: Responsible water usage during bath time.
+---
 
-• Plants: The ecological importance of plants and their role in the ecosystem.
+## 🛠️ How We Built It
+We developed **Eco Quiz** using:
 
-• Lighbulbs: The impact of energy consumption depending on your type and amount of light-bulbs
+- **HTML** - To structure the webpage.
+- **CSS** - For an appealing and user-friendly design.
+- **JavaScript** - To handle quiz functionality, user interactions, and score tracking.
+- **Flask** - For backend functionalities and hosting.
+- **Git** - For collaboration and version control.
 
-**How We Built It**
-We developed Eco Quiz using:
+---
 
-• HTML to structure the webpage.
+## 🚧 Challenges We Faced
+During development, we encountered a few obstacles, including:
 
-• CSS to create an appealing design.
+- 🏗️ Ensuring the quizzes worked correctly and provided dynamic feedback.
+- 🎨 Making the design visually appealing and intuitive.
+- 🐞 Debugging JavaScript functionalities.
+- 🌐 Learning how to host a Flask web application.
+- 📁 Figuring out the best file structure for our project.
 
-• JavaScript to handle quiz functionality, user interactions, and score tracking.
+---
 
-• Flask for all the back-end functionalities and hosting purposes.
+## 🎉 Accomplishments
+We're proud of:
 
-• Git for collaboration and teamwork purposes.
+✅ Successfully creating a functional and interactive webpage.  
+✅ Designing a visually appealing and easy-to-navigate UI.  
+✅ Implementing JavaScript and Flask to enhance user experience.  
+✅ Learning new coding techniques and improving teamwork.  
+✅ Deploying the website using **Render**. 🚀
 
-**Challenges**
-During development, we faced a few challenges, including:
+---
 
-• Ensuring the quizzes worked correctly and displayed feedback dynamically.
+## 📚 What We Learned
+This project taught us:
 
-• Making the design visually appealing and user-friendly.
+- 🔹 How to use **JavaScript** for interactive web elements.
+- 🔹 How to **host a Flask web application** with Render.
+- 🔹 How to collaborate effectively using **Git and GitHub**.
+- 🔹 The importance of **environmental awareness** and digital engagement.
 
-• Debugging JavaScript functionalities.
+---
 
-• Figuring out how to host a Flask web application.
+## 🔮 What's Next?
+Future improvements for **Eco Quiz** include:
 
-• Figuring out the file structure of the project.
+- 🎮 Adding **more fun mini-games** on diverse environmental topics.
+- ✨ Enhancing the design with **animations and better UI elements**.
 
-**Accomplishments**
-We are proud of:
-• Successfully creating a functional and interactive webpage.
+---
 
-• Designing a visually appealing layout that is easy to navigate.
+## 📸 Screenshots
+![Eco Quiz Screenshot 1](https://github.com/user-attachments/assets/a5d81cc0-8e8e-4a0e-87cb-200adbd883bc)
+![Eco Quiz Screenshot 2](https://github.com/user-attachments/assets/bf0deb1a-eadf-4de7-ad02-097cae2ee48c)
+![Eco Quiz Screenshot 3](https://github.com/user-attachments/assets/5f4125d2-3e20-4a08-828b-3cbe94444a94)
+![Eco Quiz Screenshot 4](https://github.com/user-attachments/assets/ebabd4fc-f340-4d04-aa5e-831d181e9325)
 
-• Implementing JavaScript and Flask to enhance user interaction and engagement.
+---
 
-• Learning new coding techniques and improving our teamwork skills.
-
-• Deploying the website with Render.
-
-**What We Learned**
-This project taught us valuable lessons, including:
-
-• How to use JavaScript for a wide variety of interactive web elements.
-
-• How to host a Flask web application with Render
-
-• How to collaborate effectively as a team using the Git and Github technologies
-
-• The significance of environmental awareness.
-
-**What’s Next?**
-We plan to improve and expand Eco Quiz by:
-
-• Adding more fun little games on different environmental topics.
-
-• Enhancing the design of the current games with animations and better UI elements.
+🚀 **Play. Learn. Make a Change!** 🌍
