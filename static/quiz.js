@@ -164,7 +164,7 @@ const questions = [
   // Mostrar el mapa de impacto
   function showImpactMap() {
     const mapContainer = document.getElementById("map");
-    mapContainer.innerHTML = `<img src="images/world-map.png" alt="World Map" style="width: 100%; height: auto;">`;
+    mapContainer.innerHTML = `<img src="/static/images/world-map.png" alt="World Map" style="width: 100%; height: auto;">`;
     document.getElementById("map-container").classList.remove("hidden");
   }
   

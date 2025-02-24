@@ -19,7 +19,7 @@ def water():
 
 @app.route("/garbage", methods=['GET'])
 def garbage():
-    return "<h1>Tu mama en 4</h1>"
+    return render_template('trash.html')
 
 
 @app.route("/plants", methods=['GET'])
