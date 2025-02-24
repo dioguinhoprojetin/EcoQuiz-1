@@ -1,8 +1,9 @@
-Inspiration
+**Inspiration**
+
 For the 2025 version of the Climate Change-Maker Hackathon, our team wanted to create an engaging and educational experience to raise awareness about environmental issues. We were inspired by the need to teach people who just want to have a fun time about the impact of human actions on nature and how small changes can make a big difference. Gamification felt like the perfect approach to make learning fun, interactive and cause an impression on people
 
-What Does It Do?
-Eco Quiz is a webpage featuring five little interactive games focused on different environmental topics:
+**What Does It Do?
+**Eco Quiz is a webpage featuring five little interactive games focused on different environmental topics:
 
 • Vehicles: A simulation of a 10 km car ride that showcases the impact on the environment of the ride on a kilometer by kilometer basis.
 
@@ -14,7 +15,7 @@ Eco Quiz is a webpage featuring five little interactive games focused on differe
 
 • Lighbulbs: The impact of energy consumption depending on your type and amount of light-bulbs
 
-How We Built It
+**How We Built It**
 We developed Eco Quiz using:
 
 • HTML to structure the webpage.
@@ -27,7 +28,7 @@ We developed Eco Quiz using:
 
 • Git for collaboration and teamwork purposes.
 
-Challenges
+**Challenges**
 During development, we faced a few challenges, including:
 
 • Ensuring the quizzes worked correctly and displayed feedback dynamically.
@@ -40,9 +41,8 @@ During development, we faced a few challenges, including:
 
 • Figuring out the file structure of the project.
 
-Accomplishments
+**Accomplishments**
 We are proud of:
-
 • Successfully creating a functional and interactive webpage.
 
 • Designing a visually appealing layout that is easy to navigate.
@@ -53,7 +53,7 @@ We are proud of:
 
 • Deploying the website with Render.
 
-What We Learned
+**What We Learned**
 This project taught us valuable lessons, including:
 
 • How to use JavaScript for a wide variety of interactive web elements.
@@ -64,7 +64,7 @@ This project taught us valuable lessons, including:
 
 • The significance of environmental awareness.
 
-What’s Next?
+**What’s Next?**
 We plan to improve and expand Eco Quiz by:
 
 • Adding more fun little games on different environmental topics.
