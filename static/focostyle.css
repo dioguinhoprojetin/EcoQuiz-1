@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    background-image: url("/static/images/dark.png");
+    opacity: 0.1;
+}
+.container {
+    text-align: center;
+}
+p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+.answer {
+    opacity: 0;
+}
+@keyframes fadeintext {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+.image-button {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+  }
+  
+.image-button:hover{
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
+    transform: scale(1.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+.img-container {
+    display: flex;
+    align-items: center;
+    gap: 150px; /* Spacing between images */
+}
+.img-box {
+    text-align: center;
+}

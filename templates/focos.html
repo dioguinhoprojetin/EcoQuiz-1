@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="/static/focostyle.css">
+    <script src="/static/focoscript.js" defer></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image with Cursor Effect</title>
+</head>
+<body id = "body" style="height: auto;">
+  <div>
+    <h1>LIGHTBULBS</h1>
+    <img src="/static/images/lightswitch.png" alt="" width="250px" height="auto" onclick="off()" id = "wall" opacity = "0.5">
+    <audio src="/static/sound/lightswitch.wav" id="clickSound"></audio>
+    <p>Did you know Incandescent lighbulbs are the most common type of lightbulb throughout the World</p>
+    <p>Despite that they generate 152 lb of CO2 emissions each per year</p>
+    <p>Let's see how your lightbulb habits impact the world</p>
+    <p>What is the type of lightbulb that your house mostly uses?</p>
+      <div class = "img-container">
+        <div class="img-box">
+          <img src="/static/images/Incandescent.png" alt="" width="150px" height="auto" onclick= "selected(this, 152)" id = "unselected" class = "image-button">
+          <p>Incandescent</p>
+        </div>
+        <div class="img-box">
+          <img src="/static/images/Halogen.png" alt="" width="250px" height="auto" onclick= "selected(this, 107)" id = "unselected" class = "image-button">
+          <p>Halogen</p>
+        </div>
+        <div class="img-box">
+          <img src="/static/images/CFL.png" alt="" width="250px" height="auto" onclick= "selected(this, 34)" id = "unselected" class = "image-button">
+          <p>CFL</p>
+        </div>        
+        <div class="img-box">
+          <img src="/static/images/LED.png" alt="" width="250px" height="auto" onclick= "selected(this, 22)" id = "unselected" class = "image-button">
+          <p>LED</p>
+        </div>
+      </div>
+    <p>How many hours do you use your lightbulbs per day?</p>
+    <input type="number" id="hours" min="0" max="24" onchange="hrchange(this.value)">
+    <p>How many lightbulbs do you have?</p>
+    <input type="number" id="qt" min = "0" max = "99" onchange= "qtchange(this.value)">
+    <div>
+      <p class="answer" id = "answer1"> Your Answer</p>
+      <p class="answer" id = "answer2"> Your Answer</p>
+      <p class="answer" id = "answer3"> Your Answer</p>
+      <p class="answer" id = "answer4"> Your Answer</p>
+      <p class="answer" id = "answer5"> Your Answer</p>     
+    </div>
+  </div>
+</body>
+</html>
