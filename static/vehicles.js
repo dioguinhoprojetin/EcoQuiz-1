@@ -29,4 +29,48 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
+
 animate();
+
+// Handle car movement
+
+var isOverlayActive = true;
+document.addEventListener('keydown', (event) => 
+{
+  if (isOverlayActive !== true)
+  {
+    const scrollRate = 20
+    const slideSize = window.innerWidth;
+    if (event.key === "d" || event.key === "D") 
+      {
+        window.scrollBy(0, scrollRate);
+      } 
+    else if (event.key === "a" || event.key === "A") 
+    {
+      window.scrollBy(0, scrollRate * -1);
+    }
+        
+    else if (event.key === "m" || event.key === "M") 
+    {
+      window.scrollBy(0, slideSize)
+    }
+
+    else if (event.key === "n" || event.key === "N") 
+    {
+      window.scrollBy(0, slideSize * -1)
+    }
+    else if (event.key === 'z' || event.key === 'Z')
+    {
+      window.scrollTo(0, 0);
+    }
+  }
+
+  else
+  {
+    isOverlayActive = false;
+    let elements = document.querySelectorAll(".visible");
+    elements.forEach(element => {
+      element.classList.add("hidden")
+    });
+  }
+})

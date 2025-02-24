@@ -45,9 +45,6 @@ main{
     align-items: center;
 }
 
-.item:nth-child(1) {
-}
-
 .item > * {
     display: flex;
     flex-direction: column;
@@ -95,4 +92,32 @@ main{
     align-self: flex-start;
     padding: 10px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.dropdown-overlay {
+    position: fixed;
+    z-index: 9;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 1;
+  }
+
+.instructions {
+    height: 100vh;
+    width: 100wh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visible {
+    transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
