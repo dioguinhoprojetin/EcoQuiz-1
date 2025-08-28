@@ -2,8 +2,9 @@ let kw = 0;
 let hr = 0;
 let qt = 0;
 let time = "k";
-let timeb = "k";
+let timeb = null;
 let good = true;
+let precoKWh = 0.75; // preço médio em R$ por kWh
 
 function off() {
     document.getElementById("body").style.opacity = "1";
@@ -11,102 +12,116 @@ function off() {
     playSound();
     getSunsetTime();
 }
+
 function playSound() {
     document.getElementById("clickSound").play();
-  }
+}
 
 function selected(image, yearlykW) {
     playSound();
     kw = yearlykW;
     answer();
-      document.querySelectorAll("#unselected").forEach(img => {
-          img.style.opacity = "0.5";
-    image.style.opacity = "1";
+    document.querySelectorAll("#unselected").forEach(img => {
+        img.style.opacity = "0.5";
+        image.style.opacity = "1";
     });
 }
 
-function answer(){
+function answer() {
     good = true;
-    if (kw == 0  || qt == 0 || hr == 0){
+    if (kw == 0 || qt == 0 || hr == 0) {
         document.getElementById("answer1").style.animation = "fadeintext 2s forwards";
-        document.getElementById("answer1").textContent = "Please fill all the information above.";
+        document.getElementById("answer1").textContent = "Por favor, preencha todas as informações acima.";
         return;
     }
+
     document.getElementById("answer1").style.animation = "fadeintext 2s forwards";
-    document.getElementById("answer1").textContent = "You spend " + (kw/8 * hr * 16 / 100 * qt) + " dollars per year on this lightbulb.";
+    document.getElementById("answer1").textContent =
+        "Você gasta cerca de R$ " + ((kw / 8 * hr * 16 / 100 * qt) * precoKWh).toFixed(2) +
+        " por ano com essa lâmpada.";
+
     document.getElementById("answer2").style.animation = "fadeintext 4s forwards";
     document.getElementById("answer3").style.animation = "fadeintext 6s forwards";
-    if (hr > (22-timeb)){
+
+    if (hr > (22 - timeb)) {
         good = false;
-        document.getElementById("answer2").textContent = "Since the sun sets at " + time + " in your area. Assuming you go to sleep at 10pm, your lights should only be on for " + (22 - timeb) + " hours.";
+        document.getElementById("answer2").textContent =
+            "Como o sol se põe às " + time + " na sua região, e considerando que você dorme às 22h, suas luzes deveriam ficar ligadas no máximo por " + (22 - timeb) + " horas.";
+    } else {
+        document.getElementById("answer2").textContent =
+            "Você está usando suas luzes pelo tempo adequado. Continue assim!";
     }
-    else{
-        document.getElementById("answer2").textContent = "You are using your lights for the apporiate amount of time. Keep up the good work!";    
-    }
-    if (kw != 22){
+
+    if (kw != 22) {
         good = false;
-    document.getElementById("answer3").textContent = "You can also switch to a more energy efficient lightbulb like the LED lightbulb to save money and the environment.";
+        document.getElementById("answer3").textContent =
+            "Você também pode trocar por uma lâmpada mais eficiente, como a LED, para economizar dinheiro e ajudar o meio ambiente.";
+    } else {
+        document.getElementById("answer3").textContent =
+            "Você já está indo muito bem usando lâmpadas de LED!";
     }
-    else{
-    document.getElementById("answer3").textContent = "You are already doing great by using LED lightbulbs!";
+
+    if (good == true) {
+        document.getElementById("answer4").style.animation = "fadeintext 8s forwards";
+        document.getElementById("answer4").textContent =
+            "Não há dicas adicionais para você no momento. Você está fazendo a sua parte!";
+        document.getElementById("answer5").textContent = " ";
+    } else {
+        document.getElementById("answer4").style.animation = "fadeintext 8s forwards";
+        document.getElementById("answer4").textContent =
+            "Se você mudar seus hábitos, como usar menos as luzes ou trocar para lâmpadas de LED, pode economizar ainda mais.";
+        document.getElementById("answer5").style.animation = "fadeintext 8s forwards";
+        document.getElementById("answer5").textContent =
+            "Em vez do que você está fazendo agora, você poderia economizar cerca de R$ " +
+            ((((107 / 8 * (22 - timeb) * 16 / 100 * qt) - (kw / 8 * hr * 16 / 100 * qt)) * precoKWh).toFixed(2)) +
+            " por ano.";
     }
-if (good == true){
-    document.getElementById("answer4").style.animation = "fadeintext 8s forwards";
-    document.getElementById("answer4").textContent = "There are no tips for you at the moment. You are doing your part!";
-    document.getElementById("answer5").textContent = " ";
-}
-else{
-    document.getElementById("answer4").style.animation = "fadeintext 8s forwards";
-    document.getElementById("answer4").textContent = "If you were to change your habits like using your lights less or switching to LED lightbulbs, you could save money and the environment.";
-    document.getElementById("answer5").style.animation = "fadeintext 8s forwards";
-    document.getElementById("answer5").textContent = "Instead of what you are currently doing, you could be saving " + (((107/8 * (22-timeb) *16 / 100 * qt) - (kw/8 * hr * 16 / 100 * qt)).toFixed(2)) + " dollars per year.";
-}
 }
 
-function hrchange(inp)
-{
-   hr = document.getElementById("hours").value;
-   answer();
+function hrchange(inp) {
+    hr = document.getElementById("hours").value;
+    answer();
 }
 
-function qtchange(inp)
-{
+function qtchange(inp) {
     qt = document.getElementById("qt").value;
     answer();
 }
-function tanswer(txt){
+
+function tanswer(txt) {
     document.getElementById("answer1").style.animation = "fadeintext 2s forwards";
     document.getElementById("answer1").textContent = txt;
 }
+
 function getSunsetTime() {
-    // Step 1: Get user's geolocation
+    // Pegar localização do usuário
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
             let lat = position.coords.latitude;
             let lon = position.coords.longitude;
-            
-            // Step 2: Fetch sunset time from Sunrise-Sunset API
+
+            // Buscar horário do pôr do sol na API
             fetch(`https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lon}&formatted=0`)
                 .then(response => response.json())
                 .then(data => {
                     if (data.status === "OK") {
                         let sunsetUTC = new Date(data.results.sunset);
-                        
-                        // Step 3: Convert to local time
+
+                        // Converter para horário local
                         let sunsetLocal = sunsetUTC.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-                        
-                        console.log("Sunset Time:", sunsetLocal);
+
+                        console.log("Horário do pôr do sol:", sunsetLocal);
                         time = sunsetLocal;
                         timeb = sunsetUTC.getHours();
                     } else {
-                        console.error("Failed to fetch sunset time.");
+                        console.error("Falha ao buscar o horário do pôr do sol.");
                     }
                 })
-                .catch(error => console.error("Error fetching data:", error));
-        }, error => console.error("Geolocation Error:", error.message));
+                .catch(error => console.error("Erro ao buscar dados:", error));
+        }, error => console.error("Erro de geolocalização:", error.message));
     } else {
-        console.error("Geolocation is not supported by this browser.");
+        console.error("Geolocalização não é suportada neste navegador.");
     }
 }
 
-// Call the function
+// Executa a função inicial
